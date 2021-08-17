@@ -1,7 +1,27 @@
+import { useState, useEffect } from 'react';
+
 import CartDropdown from "../CartDropdown/CartDropdown"
 import MobileMenu from "../MobileMenu/MobileMenu"
 
 const Header: React.FC = () => {
+  const [openCartDropdown, setOpenCartDropdown] = useState(false)
+  const [openMobileMenu, setOpenMobileMenu] = useState(false)
+
+  useEffect(() => {
+    const header = document.querySelector('.sticky-bar');
+    const handleScroll = () => {
+      const scroll = window.screenTop;
+      if (scroll < 200) {
+        header?.classList.remove('stick');
+      } else {
+        header?.classList.add('stick');
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <header className="header-area header-padding-1 sticky-bar header-res-padding clearfix">
       <div className="container-fluid">
@@ -129,11 +149,11 @@ const Header: React.FC = () => {
                 <a href="wishlist.html"><i className="pe-7s-like"></i></a>
               </div>
               <div className="same-style cart-wrap">
-                <button className="icon-cart">
+                <button className="icon-cart" onClick={() => setOpenCartDropdown(!openCartDropdown)}>
                   <i className="pe-7s-shopbag"></i>
                   <span className="count-style">02</span>
                 </button>
-                <CartDropdown />
+                <CartDropdown isOpen={openCartDropdown} />
               </div>
             </div>
           </div>

@@ -1,6 +1,10 @@
-const CartDropdown: React.FC = () => {
+interface CartDropdownProps {
+  isOpen: boolean;
+}
+
+const CartDropdown: React.FC<CartDropdownProps> = ({ isOpen }) => {
   return (
-    <div className="shopping-cart-content">
+    <div className={`shopping-cart-content ${isOpen ? 'cart-visible' : ''}`}>
       <ul>
         <li className="single-shopping-cart">
           <div className="shopping-cart-img">
