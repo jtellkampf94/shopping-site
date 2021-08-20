@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MobileMenu: React.FC = () => {
   return (
     <div className="mobile-menu-area">
@@ -5,120 +7,128 @@ const MobileMenu: React.FC = () => {
         <nav id="mobile-menu-active">
           <ul className="menu-overflow">
             <li>
-              <a href="index.html">HOME</a>
+              <Link to="/">HOME</Link>
               <ul>
                 <li>
-                  <a href="index.html">home version 1</a>
+                  <Link to="/">home version 1</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="shop.html">Shop</a>
+              <Link to="shop.html">Shop</Link>
               <ul>
                 <li>
-                  <a href="#">shop layout</a>
+                  <Link to="#">shop layout</Link>
                   <ul>
                     <li>
-                      <a href="shop.html">standard style</a>
+                      <Link to="shop.html">standard style</Link>
                     </li>
                     <li>
-                      <a href="shop-filter.html">Grid filter style</a>
+                      <Link to="shop-filter.html">Grid filter style</Link>
                     </li>
                     <li>
-                      <a href="shop-grid-2-col.html">Grid 2 column</a>
+                      <Link to="shop-grid-2-col.html">Grid 2 column</Link>
                     </li>
                     <li>
-                      <a href="shop-no-sidebar.html">Grid No sidebar</a>
+                      <Link to="shop-no-sidebar.html">Grid No sidebar</Link>
                     </li>
                     <li>
-                      <a href="shop-grid-fw.html">Grid full wide </a>
+                      <Link to="shop-grid-fw.html">Grid full wide </Link>
                     </li>
                     <li>
-                      <a href="shop-right-sidebar.html">Grid right sidebar</a>
+                      <Link to="shop-right-sidebar.html">
+                        Grid right sidebar
+                      </Link>
                     </li>
                     <li>
-                      <a href="shop-list.html">list 1 column box </a>
+                      <Link to="shop-list.html">list 1 column box </Link>
                     </li>
                     <li>
-                      <a href="shop-list-fw.html">list 1 column full wide </a>
+                      <Link to="shop-list-fw.html">
+                        list 1 column full wide{" "}
+                      </Link>
                     </li>
                     <li>
-                      <a href="shop-list-fw-2col.html">
+                      <Link to="shop-list-fw-2col.html">
                         list 2 column full wide
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#">product details</a>
+                  <Link to="#">product details</Link>
                   <ul>
                     <li>
-                      <a href="product-details.html">tab style 1</a>
+                      <Link to="product-details.html">tab style 1</Link>
                     </li>
                     <li>
-                      <a href="product-details-2.html">tab style 2</a>
+                      <Link to="product-details-2.html">tab style 2</Link>
                     </li>
                     <li>
-                      <a href="product-details-3.html">tab style 3</a>
+                      <Link to="product-details-3.html">tab style 3</Link>
                     </li>
                     <li>
-                      <a href="product-details-4.html">sticky style</a>
+                      <Link to="product-details-4.html">sticky style</Link>
                     </li>
                     <li>
-                      <a href="product-details-5.html">gallery style </a>
+                      <Link to="product-details-5.html">gallery style </Link>
                     </li>
                     <li>
-                      <a href="product-details-slider-box.html">Slider style</a>
+                      <Link to="product-details-slider-box.html">
+                        Slider style
+                      </Link>
                     </li>
                     <li>
-                      <a href="product-details-affiliate.html">
+                      <Link to="product-details-affiliate.html">
                         affiliate style
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="product-details-6.html">fixed image style </a>
+                      <Link to="product-details-6.html">
+                        fixed image style{" "}
+                      </Link>
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="shop.html">Collection</a>
+              <Link to="shop.html">Collection</Link>
             </li>
             <li>
-              <a href="#">Pages</a>
+              <Link to="#">Pages</Link>
               <ul>
                 <li>
-                  <a href="about.html">about us</a>
+                  <Link to="about.html">about us</Link>
                 </li>
                 <li>
-                  <a href="cart-page.html">cart page</a>
+                  <Link to="cart-page.html">cart page</Link>
                 </li>
                 <li>
-                  <a href="checkout.html">checkout </a>
+                  <Link to="checkout.html">checkout </Link>
                 </li>
                 <li>
-                  <a href="wishlist.html">wishlist </a>
+                  <Link to="wishlist.html">wishlist </Link>
                 </li>
                 <li>
-                  <a href="my-account.html">my account</a>
+                  <Link to="my-account.html">my account</Link>
                 </li>
                 <li>
-                  <a href="login-register.html">login / register </a>
+                  <Link to="/login-register">login / register </Link>
                 </li>
                 <li>
-                  <a href="contact.html">contact us </a>
+                  <Link to="contact.html">contact us </Link>
                 </li>
                 <li>
-                  <a href="404.html">404 page </a>
+                  <Link to="404.html">404 page </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="about.html">About us</a>
+              <Link to="about.html">About us</Link>
             </li>
             <li>
-              <a href="contact.html">Contact</a>
+              <Link to="contact.html">Contact</Link>
             </li>
           </ul>
         </nav>

@@ -1,19 +1,23 @@
 import { Fragment } from "react";
-import Banner from "../Banner/Banner";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import HomeSlider from "../HomeSlider/HomeSlider";
-import ProductArea from "../ProductArea/ProductArea";
+import Home from "../Home/Home";
+import LoginRegister from "../LoginRegister/LoginRegister";
 
 const App: React.FC = () => {
   return (
-    <Fragment>
-      <Header />
-      <HomeSlider />
-      <Banner />
-      <ProductArea />
-      <Footer />
-    </Fragment>
+    <BrowserRouter>
+      <Fragment>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login-register" component={LoginRegister} />
+        </Switch>
+        <Footer />
+      </Fragment>
+    </BrowserRouter>
   );
 };
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import CartDropdown from "../CartDropdown/CartDropdown";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
@@ -17,7 +19,7 @@ const Header: React.FC = () => {
               <nav>
                 <ul>
                   <li>
-                    <a href="index.html">
+                    <a href="/">
                       Home <i className="fa fa-angle-down"></i>
                     </a>
                     <ul className="mega-menu mega-menu-padding">
@@ -221,16 +223,16 @@ const Header: React.FC = () => {
                 <div className="account-dropdown">
                   <ul>
                     <li>
-                      <a href="login-register.html">Login</a>
+                      <Link to="login-register">Login</Link>
                     </li>
                     <li>
-                      <a href="login-register.html">Register</a>
+                      <Link to="login-register">Register</Link>
                     </li>
                     <li>
-                      <a href="wishlist.html">Wishlist </a>
+                      <Link to="wishlist">Wishlist </Link>
                     </li>
                     <li>
-                      <a href="my-account.html">my account</a>
+                      <Link to="my-account">my account</Link>
                     </li>
                   </ul>
                 </div>
